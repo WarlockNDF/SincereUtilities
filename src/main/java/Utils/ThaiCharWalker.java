@@ -25,8 +25,8 @@ public class ThaiCharWalker {
         String numberString = String.valueOf(number);
         if (numberString.length() > 5)
         {
-            int avgLen = numberString.length() / 2;
-            return fastInterLoopSlideChars(avgLen, numberString, ThaiNumberChars);
+            int middle = numberString.length() / 2;
+            return fastInterLoopSlideChars(middle, numberString, ThaiNumberChars);
         }
         return normTransformChars(numberString, ThaiNumberChars);
     }
