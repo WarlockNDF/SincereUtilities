@@ -36,17 +36,14 @@ public class ThaiCharWalker {
         middle = middle - 1;
         char[] chars = ref.toCharArray();
         int charsLen = chars.length - 1;
-        for (int i = 0; i <= charsLen; i++)
+        for (int i = 0; i <= middle; i++)
         {
             int rightCompute = charsLen - i;
             if (rightCompute > middle)
             {
                 chars[rightCompute] = refCharMap.getOrDefault(chars[rightCompute], chars[rightCompute]);
             }
-            if (i <= middle)
-            {
-                chars[i] = refCharMap.getOrDefault(chars[i], chars[i]);
-            }
+            chars[i] = refCharMap.getOrDefault(chars[i], chars[i]);
         }
         return String.valueOf(chars);
     }
